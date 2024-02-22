@@ -1,4 +1,3 @@
-<div>
-    <app-content-card *ngFor="let item of contentArray.slice(0, 5)" [content]="item"></app-content-card>
-</div>
-  
+<div *ngFor="let item of sportsContent; index as i; first as isFirst;">
+<app-content-card [content]="item"></app-content-card>
+</div>    

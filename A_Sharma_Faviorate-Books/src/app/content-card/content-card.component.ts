@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Content } from '../helper-files/content-interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-content-card',
@@ -10,11 +10,8 @@ import { Content } from '../helper-files/content-interface';
   styleUrl: './content-card.component.scss'
 })
 export class ContentCardComponent {
-  @Input() content: Content;
-  
-  showDetails() {
-    console.log('Image clicked!');
-    console.log(`Image ID: ${this.content.id}, Image Title: ${this.content.title}`);
-  }
- 
+ @Input() content:any;
+ OnClick=(id:number,name:string) =>{
+return console.log(`number ${id} and ${name} of the content`);
+  };
 }
